@@ -177,14 +177,6 @@ final List<SelectionMenuItem> _defaultSelectionMenuItems = [
       insertQuoteAfterSelection(editorState);
     },
   ),
-  SelectionMenuItem(
-    name: 'Embed',
-    icon: _selectionMenuIcon('code'),
-    keywords: ['code', 'embed_code'],
-    handler: (editorState, _, __) {
-      insertEmbedCodeAfterSelection(editorState);
-    },
-  ),
 ];
 
 Widget _selectionMenuIcon(String name) {
