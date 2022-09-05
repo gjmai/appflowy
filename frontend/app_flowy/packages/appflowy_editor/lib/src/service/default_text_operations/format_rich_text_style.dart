@@ -21,12 +21,6 @@ void insertQuoteAfterSelection(EditorState editorState) {
   });
 }
 
-void insertEmbedCodeAfterSelection(EditorState editorState) {
-  insertTextNodeAfterSelection(editorState, {
-    StyleKey.subtype: StyleKey.code,
-  });
-}
-
 void insertCheckboxAfterSelection(EditorState editorState) {
   insertTextNodeAfterSelection(editorState, {
     StyleKey.subtype: StyleKey.checkbox,
@@ -150,10 +144,6 @@ bool formatHighlight(EditorState editorState) {
       editorState, StyleKey.backgroundColor, defaultHighlightColor);
   return formatRichTextPartialStyle(editorState, StyleKey.backgroundColor,
       customValue: value ? defaultBackgroundColor : defaultHighlightColor);
-}
-
-bool formatEmbedCode(EditorState editorState) {
-  return formatRichTextPartialStyle(editorState, StyleKey.code);
 }
 
 bool formatRichTextPartialStyle(EditorState editorState, String styleKey,
